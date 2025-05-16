@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lista de Regalos - Boda</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-green-50 font-sans text-gray-800">
+
+  <!-- Banner -->
+  <div class="relative">
+    <img src="imagenes/banner.jpg" alt="Banner Boda" class="w-full h-64 object-cover">
+    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+      <h1 class="italic font-serif text-white text-4xl md:text-5xl text-center">Nuestra Lista de Regalos de Boda T&J</h1>
+    </div>
+  </div>
+
+  <div class="max-w-7xl mx-auto p-6">
+    <!-- Lista de Regalos -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+
+      <!-- Producto -->
+      <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col items-center p-4">
+        <img src="imagenes/dormitorio.jpg" alt="dormitorio" class="w-full h-32 object-cover mb-4 rounded">
+        <h2 class="text-lg font-semibold mb-1 text-center">Aporte para dormitorio</h2>
+        <p class="text-green-700 font-medium mb-2">S/. 100.00</p>
+        <button onclick="mostrarDatosPago()" class="bg-gray-900 text-white px-4 py-2 rounded hover:bg-gray-1000 w-full">Hacer el aporte</button>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col items-center p-4">
+        <img src="imagenes/cocina.jpg" alt="cocina" class="w-full h-32 object-cover mb-4 rounded">
+        <h2 class="text-lg font-semibold mb-1 text-center">Aporte para cocina</h2>
+        <p class="text-green-700 font-medium mb-2">S/. 100.00</p>
+        <button onclick="mostrarDatosPago()" class="bg-gray-900 text-white px-4 py-2 rounded hover:bg-gray-1000 w-full">Hacer el aporte</button>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col items-center p-4">
+        <img src="imagenes/luna-miel.jpg" alt="luna-miel" class="w-full h-32 object-cover mb-4 rounded">
+        <h2 class="text-lg font-semibold mb-1 text-center">Aporte para luna de miel</h2>
+        <p class="text-green-700 font-medium mb-2">S/. 200.00</p>
+        <button onclick="mostrarDatosPago()" class="bg-gray-900 text-white px-4 py-2 rounded hover:bg-gray-1000 w-full">Hacer el aporte</button>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col items-center p-4">
+        <img src="imagenes/vajilla.jpg" alt="vajilla" class="w-full h-32 object-cover mb-4 rounded">
+        <h2 class="text-lg font-semibold mb-1 text-center">Aporte para vajilla elegante</h2>
+        <p class="text-green-700 font-medium mb-2">S/. 50.00</p>
+        <button onclick="mostrarDatosPago()" class="bg-gray-900 text-white px-4 py-2 rounded hover:bg-gray-1000 w-full">Hacer el aporte</button>
+      </div>
+
+      <!-- Continúa con el mismo formato para los productos restantes -->
+      <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col items-center p-4">
+        <img src="imagenes/nuevo-depa.jpg" alt="nuevo-depa" class="w-full h-32 object-cover mb-4 rounded">
+        <h2 class="text-lg font-semibold mb-1 text-center">Aporte para departamento</h2>
+        <p class="text-green-700 font-medium mb-2">S/. 500.00</p>
+        <button onclick="mostrarDatosPago()" class="bg-gray-900 text-white px-4 py-2 rounded hover:bg-gray-1000 w-full">Hacer el aporte</button>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col items-center p-4">
+        <img src="imagenes/mudanza.jpg" alt="mudanza" class="w-full h-32 object-cover mb-4 rounded">
+        <h2 class="text-lg font-semibold mb-1 text-center">Aporte para mudanza</h2>
+        <p class="text-green-700 font-medium mb-2">S/. 100.00</p>
+        <button onclick="mostrarDatosPago()" class="bg-gray-900 text-white px-4 py-2 rounded hover:bg-gray-1000 w-full">Hacer el aporte</button>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col items-center p-4">
+        <img src="imagenes/sala.jpg" alt="sala" class="w-full h-32 object-cover mb-4 rounded">
+        <h2 class="text-lg font-semibold mb-1 text-center">Aporte para sala</h2>
+        <p class="text-green-700 font-medium mb-2">S/. 100.00</p>
+        <button onclick="mostrarDatosPago()" class="bg-gray-900 text-white px-4 py-2 rounded hover:bg-gray-1000 w-full">Hacer el aporte</button>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col items-center p-4">
+        <img src="imagenes/sorpresa.jpg" alt="sorpresa" class="w-full h-32 object-cover mb-4 rounded">
+        <h2 class="text-lg font-semibold mb-1 text-center">Aporte para sorpresa</h2>
+        <p class="text-green-700 font-medium mb-2">S/. 100.00</p>
+        <button onclick="mostrarDatosPago()" class="bg-gray-900 text-white px-4 py-2 rounded hover:bg-gray-1000 w-full">Hacer el aporte</button>
+      </div>
+
+      <!-- Continúa con el resto de los productos del mismo modo... -->
+
+    </div>
+
+    <!-- Datos de Pago -->
+    <div id="datosPago" class="hidden bg-green-100 p-6 mt-8 rounded shadow text-center">
+      <h2 class="text-xl font-semibold text-green-700 mb-2">💸 Datos para tu aporte</h2>
+      <p><strong>Cuenta BCP:</strong> 123-45678901-0-12</p>
+      <p><strong>Yape / Plin:</strong> 987654321</p>
+      <p class="text-sm text-gray-600 mt-2">¡Gracias por tu regalo y por acompañarnos en este día especial! 💕</p>
+    </div>
+  </div>
+
+  <script>
+    function mostrarDatosPago() {
+      const div = document.getElementById('datosPago');
+      div.classList.remove('hidden');
+      div.scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+
+</body>
+</html>
+
